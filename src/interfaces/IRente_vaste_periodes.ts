@@ -1,8 +1,13 @@
-export interface IRenteVastePeriodes {
+// export interface IRenteVastePeriodes {
+//     id: number,
+//     jaar: number,
+//     percentage: number;
+// }
+
+export interface IberekenRenteMaandbedrag {
     id: number,
-    jaar: number,
-    percentage: number;
-}
+    Maandbedrag: number
+};
 
 
 

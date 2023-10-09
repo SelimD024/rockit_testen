@@ -1,15 +1,19 @@
 import BerekenMaxBedrag from "@/app/components/hypo/bereken_max_bedrag";
 import Renteinfo from "@/resources/renteinfo.json";
-import {IRenteVastePeriodes} from "@/interfaces/IRente_vaste_periodes";
 
 const RenteInfo = Renteinfo["rentevaste_periodes"];
 
-export const decimaalNaarMaandelijkseRente = (id : number) => {
-    return RenteInfo[id - 1].percentage / 12;
+// Zet totale rente percentage om naar maandelijkse rente percentage
+export const decimaalNaarMaandelijkseRente  = (id : number) => {
+    const Maandelijksepercentage =  RenteInfo[id - 1].percentage / 12.;
+    return parseFloat(Maandelijksepercentage.toFixed(5));
 }
 
-export const berekenRenteMaandBedrag = (id : number, maandbedrag : number) => {
-    return BerekenMaxBedrag(maandbedrag) * decimaalNaarMaandelijkseRente(id);
+// Berekent Rentemaandbedrag:
+// Hypomaxbedrag * Rente maandelijkse percentage
+export const berekenRenteMaandBedrag = (id : number, maandinkomen : number) => {
+    const Maandelijksebedrag: number =  BerekenMaxBedrag(maandinkomen) * decimaalNaarMaandelijkseRente(id);
+    return parseFloat(Maandelijksebedrag.toFixed(2));
 }
 
 
