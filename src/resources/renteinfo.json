@@ -1,0 +1,30 @@
+{
+  "rentevaste_periodes":
+  [
+    {
+      "id": 1,
+      "jaar": 1,
+      "percentage": 0.02
+    },
+    {
+      "id": 2,
+      "jaar": 5,
+      "percentage": 0.03
+    },
+    {
+      "id": 3,
+      "jaar": 10,
+      "percentage": 0.035
+    },
+    {
+      "id": 4,
+      "jaar": 20,
+      "percentage": 0.045
+    },
+    {
+      "id": 5,
+      "jaar": 30,
+      "percentage": 0.05
+    }
+  ]
+}
