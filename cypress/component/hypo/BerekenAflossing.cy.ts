@@ -14,6 +14,4 @@ describe('Bereken aflossing ', () => {
     it("Bereken uiteindelijk totaal bedrag na 30 jaar", () => {
         expect(berekenTotaalbedrag(1, 3000)).to.equal(244983.6)
     })
-
-
 });
